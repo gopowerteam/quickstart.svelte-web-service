@@ -1,5 +1,5 @@
-<template lang="pug">
-span dashboard
+<template>
+    <span>dashbaord</span>
 </template>
 
 <script lang="ts">

@@ -1,14 +1,12 @@
-<template lang="pug">
-.userid {$userid}
-Button(kind='primary', on:click='{ login }', size='field') login
-.a.p-10.text-red-400.text-xl 123
+<template>
+    <div class="userid">{$userid}</div>
+    <Button kind="primary" on:click="{login}" size="field">login</Button>
+    <div class=".a.p-10.text-red-400.text-xl">123</div>
 </template>
 
 <script lang="ts">
 import { useStore } from '@/store'
-import type { UserEvents, UserState } from '@/store/user.store'
-import { useStoreon } from '@storeon/svelte'
-import { useFocus, useNavigate } from 'svelte-navigator'
+import { useNavigate } from 'svelte-navigator'
 import { Button } from 'carbon-components-svelte'
 
 const navigate = useNavigate()

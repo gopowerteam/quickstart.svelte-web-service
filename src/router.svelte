@@ -1,9 +1,12 @@
-<template lang="pug">
-Router
-    Route(path='/')
-        Login
-    Route(path='/dashboard')
-        Dashboard
+<template>
+    <Router>
+        <Route path="/">
+            <Login />
+        </Route>
+        <Route path="/dashboard">
+            <Dashboard />
+        </Route>
+    </Router>
 </template>
 
 <script lang="ts">

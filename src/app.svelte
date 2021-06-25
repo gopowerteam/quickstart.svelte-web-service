@@ -1,7 +1,14 @@
-<template lang="pug">
-main
-    Router
+<template>
+    <main>
+        <Router />
+    </main>
 </template>
+
+<style lang="postcss" global>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</style>
 
 <script lang="ts">
 import Router from '@/router.svelte'
@@ -13,9 +20,3 @@ useTheme()
 // 安装Store
 provideStore()
 </script>
-
-<style lang="postcss" global>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-</style>
