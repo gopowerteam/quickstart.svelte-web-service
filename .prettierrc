@@ -1,0 +1,37 @@
+{
+    "printWidth": 80,
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "useTabs": false,
+    "proseWrap": "never",
+    "overrides": [
+        {
+            "files": ".prettierrc",
+            "options": {
+                "parser": "json"
+            }
+        },
+        {
+            "files": "*.svelte",
+            "options": {
+                "parser": "vue",
+                "pugTabWidth": 4,
+                "pugPrintWidth": 90,
+                "pugAttributeSeparator": "always",
+                "pugSingleFileComponentIndentation": false,
+                "pugWrapAttributesThreshold": 3,
+                "pugClassNotation": "as-is",
+                "pugWrapAttributesPattern": "^v-(if|else|for)",
+                "pugSortAttributes": "asc",
+                "pugClosingBracketPosition": "new-line"
+            }
+        }
+    ],
+    "svelteSortOrder": "options-markup-styles-scripts",
+    "svelteStrictMode": true,
+    "svelteBracketNewLine": false,
+    "svelteAllowShorthand": false,
+    "svelteIndentScriptAndStyle": false
+}
