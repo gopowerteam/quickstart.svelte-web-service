@@ -11,6 +11,7 @@ export default defineConfig({
         }
     },
     optimizeDeps: {
-        exclude: ['@storeon/svelte']
+        include: ['clipboard-copy'],
+        exclude: ['@storeon/svelte', 'svelte-navigator']
     }
 })

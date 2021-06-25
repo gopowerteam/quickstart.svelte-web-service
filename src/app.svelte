@@ -6,9 +6,16 @@ main
 <script lang="ts">
 import Router from '@/router.svelte'
 import { provideStore } from '@/store'
+import { useTheme } from './theme'
 
-// 注入Store
+// 安装主题
+useTheme()
+// 安装Store
 provideStore()
 </script>
 
-<style lang="less"></style>
+<style lang="postcss" global>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</style>
