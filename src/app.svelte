@@ -1,6 +1,6 @@
 <template>
     <main>
-        <Router />
+        <svelte:component this="{CurrentLayout}" />
     </main>
 </template>
 
@@ -11,12 +11,15 @@
 </style>
 
 <script lang="ts">
-import Router from '@/router.svelte'
-import { provideStore } from '@/store'
+import { provideStore, useStore } from '@/store'
 import { useTheme } from './theme'
+import { layouts } from '@/layouts'
 
 // 安装主题
 useTheme()
 // 安装Store
 provideStore()
+
+const { layout } = useStore((store) => store.app)
+$: CurrentLayout = layouts[$layout]
 </script>

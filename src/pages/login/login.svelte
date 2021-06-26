@@ -1,13 +1,16 @@
 <template>
-    <div class="userid">{$userid}</div>
-    <Button kind="primary" on:click="{login}" size="field">login</Button>
-    <div class=".a.p-10.text-red-400.text-xl">123</div>
+    <PageContainer layout="default">
+        <div class="userid">{$userid}</div>
+        <Button kind="primary" on:click="{login}" size="field">login</Button>
+        <div class=".a.p-10.text-red-400.text-xl">123</div>
+    </PageContainer>
 </template>
 
 <script lang="ts">
 import { useStore } from '@/store'
 import { useNavigate } from 'svelte-navigator'
 import { Button } from 'carbon-components-svelte'
+import PageContainer from '@/shared/components/page-container.svelte'
 
 const navigate = useNavigate()
 
