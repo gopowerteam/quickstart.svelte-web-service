@@ -4,7 +4,7 @@
             <Sidebar />
         </div>
         <div class="content relative">
-            <Router />
+            <RouterOutlet />
         </div>
     </main>
 </template>
@@ -17,6 +17,6 @@ main {
 </style>
 
 <script lang="ts">
-import Router from '@/router.svelte'
+import { RouterOutlet } from 'svelte-easyroute'
 import Sidebar from './components/sidebar.svelte'
 </script>

@@ -8,16 +8,16 @@
 
 <script lang="ts">
 import { useStore } from '@/store'
-import { useNavigate } from 'svelte-navigator'
 import { Button } from 'carbon-components-svelte'
 import PageContainer from '@/shared/components/page-container.svelte'
+import type Router from 'easyroute-core'
 
-const navigate = useNavigate()
+export let router: Router
 
 const { userid, dispatch } = useStore((store) => store.user)
 
 function login() {
     dispatch('login', $userid + '1')
-    navigate('/dashboard')
+    router.push('/dashboard')
 }
 </script>

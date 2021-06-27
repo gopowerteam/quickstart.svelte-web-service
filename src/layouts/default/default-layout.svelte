@@ -1,7 +1,7 @@
 <template>
-    <Router />
+    <RouterOutlet />
 </template>
 
 <script lang="ts">
-import Router from '@/router.svelte'
+import { RouterOutlet } from 'svelte-easyroute'
 </script>

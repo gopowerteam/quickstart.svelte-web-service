@@ -1,7 +1,7 @@
 <template>
-    <main>
+    <EasyrouteProvider router="{router}">
         <svelte:component this="{CurrentLayout}" />
-    </main>
+    </EasyrouteProvider>
 </template>
 
 <style lang="postcss" global>
@@ -11,9 +11,12 @@
 </style>
 
 <script lang="ts">
+import { EasyrouteProvider } from 'svelte-easyroute'
 import { provideStore, useStore } from '@/store'
 import { useTheme } from './theme'
 import { layouts } from '@/layouts'
+
+import router from '@/router'
 
 // 安装主题
 useTheme()
