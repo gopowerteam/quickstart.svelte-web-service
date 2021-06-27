@@ -1,5 +1,5 @@
 <template>
-    <PageContainer layout="workspace">page1</PageContainer>
+    <PageContainer title="页面1" layout="workspace">page1</PageContainer>
 </template>
 
 <script>
