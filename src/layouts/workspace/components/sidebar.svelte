@@ -52,7 +52,7 @@ function onNavigate(path) {
 }
 
 router.currentMatched.subscribe((matched) => {
-    if (matched) {
+    if (matched && matched.length) {
         const [route] = matched
         currentRoute = route.name
     }
