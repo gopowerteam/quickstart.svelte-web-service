@@ -17,7 +17,7 @@ export let router: Router
 const { userid, dispatch } = useStore((store) => store.user)
 
 function login() {
-    dispatch('login', $userid + '1')
+    dispatch('login', 'admin')
     router.push('/dashboard')
 }
 </script>

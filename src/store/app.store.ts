@@ -23,5 +23,5 @@ const appModule: StoreonModule<AppState, AppEvents> = (store) => {
 
 export const AppStore: Store<AppState, AppEvents> = {
     keys: Object.keys(state) as Array<keyof AppState>,
-    module: appModule
+    module: appModule,
 }

@@ -26,6 +26,7 @@
         "vite-plugin-svelte-svg": "^1.0.0"
     },
     "dependencies": {
+        "@storeon/localstorage": "^1.4.0",
         "@storeon/svelte": "^1.0.0",
         "rxjs": "^7.1.0",
         "storeon": "^3.1.4",

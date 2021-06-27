@@ -3,6 +3,7 @@ import type { Store } from '.'
 
 export interface UserState {
     userid: string
+    username: string
 }
 
 export interface UserEvents {
@@ -10,15 +11,17 @@ export interface UserEvents {
 }
 
 const state: UserState = {
-    userid: ''
+    userid: '',
+    username: ''
 }
 
 const module: StoreonModule<UserState, UserEvents> = (store) => {
     store.on('@init', () => state)
-    store.on('login', (state, id) => ({ ...state, userid: id }))
+    store.on('login', (state, id) => ({ ...state, userid: id, username: id + ':name' }))
 }
 
 export const UserStore: Store<UserState, UserEvents> = {
     keys: Object.keys(state) as Array<keyof UserState>,
-    module
+    module,
+    persist: ['userid']
 }

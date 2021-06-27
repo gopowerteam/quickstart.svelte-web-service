@@ -1,3 +1,4 @@
+import { persistState } from '@storeon/localstorage'
 import { provideStoreon, useStoreon } from '@storeon/svelte'
 import { createStoreon, StoreonModule } from 'storeon'
 import { setContext } from 'svelte'
@@ -8,6 +9,7 @@ import { UserStore, UserState, UserEvents } from './user.store'
 export type Store<S, E> = {
     keys: (keyof S)[]
     module: StoreonModule<S, E>
+    persist?: string[]  // 持久化支持
 }
 
 type Events = AppEvents & UserEvents
@@ -18,10 +20,22 @@ export const stores = {
     app: AppStore
 }
 
+const getModules = () => {
+    return Object.values(stores).map((s) => s.module)
+}
+
+const getPersist = () => {
+    return Object.values(stores)
+        .filter((s) => s.persist)
+        .map((s) => s.persist)
+        .flat()
+}
+
 // 创建Store
-export const store = createStoreon<State, Events>(
-    Object.values(stores).map((s) => s.module)
-)
+export const store = createStoreon<State, Events>([
+    ...getModules(),
+    persistState(getPersist())
+])
 
 /**
  * 使用Store
