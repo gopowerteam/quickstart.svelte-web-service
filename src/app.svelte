@@ -4,12 +4,6 @@
     </EasyrouteProvider>
 </template>
 
-<style lang="postcss" global>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-</style>
-
 <script lang="ts">
 import { EasyrouteProvider } from 'svelte-easyroute'
 import { provideStore, useStore } from '@/store'

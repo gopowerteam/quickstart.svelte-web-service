@@ -1,4 +1,5 @@
 import App from './app.svelte'
+import '@/assets/styles/tailwind.postcss'
 import '@/assets/styles/index.less'
 
 const app = new App({

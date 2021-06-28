@@ -1,5 +1,5 @@
 <template>
-    <PageContainer layout="default">
+    <PageContainer title="登录" layout="default" header="{false}">
         <div class="userid">{$userid}</div>
         <Button kind="primary" on:click="{login}" size="field">login</Button>
         <div class=".a.p-10.text-red-400.text-xl">123</div>

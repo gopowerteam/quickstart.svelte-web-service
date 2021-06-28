@@ -4,12 +4,14 @@
 
 <template>
     <div class="absolute inset-0 flex flex-col">
-        <div class="header pl-5 py-5 flex items-center justify-between">
-            <div class="title text-xl">{title}</div>
-            <div class="action pr-10">
-                <slot name="action" />
+        {#if header}
+            <div class="header pl-5 py-5 flex items-center justify-between">
+                <div class="title text-xl">{title}</div>
+                <div class="action pr-10">
+                    <slot name="action" />
+                </div>
             </div>
-        </div>
+        {/if}
         <div class="content p-5 flex-auto">
             <slot />
         </div>
@@ -30,6 +32,7 @@
 <script lang="ts">
 import { useStore } from '@/store'
 
+export let header: boolean = true
 export let layout: 'default' | 'workspace'
 export let title: string = '' // 默认标题
 
