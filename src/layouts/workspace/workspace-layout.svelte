@@ -17,6 +17,6 @@ main {
 </style>
 
 <script lang="ts">
-import { RouterOutlet } from 'svelte-easyroute'
+import { RouterOutlet } from '@easyroute/svelte'
 import Sidebar from './components/sidebar.svelte'
 </script>

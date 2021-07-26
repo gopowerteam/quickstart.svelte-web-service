@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { resolve } from 'path'
-import  svelteSVG from 'vite-plugin-svelte-svg'
+import svelteSVG from 'vite-plugin-svelte-svg'
 
 // import { svelteSVG } from 'rollup-plugin-svelte-svg'
 
@@ -19,7 +19,7 @@ export default defineConfig({
         }
     },
     optimizeDeps: {
-        include: ['clipboard-copy'],
+        // include: ['clipboard-copy'],
         exclude: ['@storeon/svelte']
     }
 })

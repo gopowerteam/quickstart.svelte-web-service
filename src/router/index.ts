@@ -1,9 +1,10 @@
-import Router from 'svelte-easyroute'
+import Router from '@easyroute/core'
+import historyMode from '@easyroute/core/history-mode'
 import { routes } from './routes'
 import { store } from '@/store'
 import { boot } from '@/bootstrap/boot'
 export const router = new Router({
-    mode: "history",
+    mode: historyMode,
     omitTrailingSlash: true,
     routes
 })

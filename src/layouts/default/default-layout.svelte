@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts">
-import { RouterOutlet } from 'svelte-easyroute'
+import { RouterOutlet } from '@easyroute/svelte'
 </script>
