@@ -7,11 +7,12 @@
 <script>
 import PageContainer from '@/shared/components/page-container.svelte'
 import { Button } from 'carbon-components-svelte'
-import { getContext } from 'svelte'
+import { useModal } from '@gopowerteam/svelte-modal'
 import ModalTest from './modal-test.svelte'
-const modal = getContext('modal')
+
+const modal = useModal()
+
 function onModal() {
-    console.log(modal)
     modal
         .open({
             title: '弹窗标题',
@@ -20,8 +21,8 @@ function onModal() {
                 msg: '123'
             }
         })
-        .then(() => {
-            console.log('close')
+        .then((a) => {
+            console.log('close', a)
         })
 }
 </script>

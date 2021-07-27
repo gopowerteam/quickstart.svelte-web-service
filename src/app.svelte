@@ -1,6 +1,6 @@
 <template>
     <EasyrouteProvider router="{router}">
-        <ModalProvider>
+        <ModalProvider minWidth="{500}">
             <svelte:component this="{CurrentLayout}" />
         </ModalProvider>
     </EasyrouteProvider>
@@ -16,7 +16,7 @@ import { useTheme } from './theme'
 import { layouts } from '@/layouts'
 
 import router from '@/router'
-import ModalProvider from '@/shared/components/modal-provider.svelte'
+import { ModalProvider } from '@gopowerteam/svelte-modal'
 
 // 安装Store
 provideStore()
